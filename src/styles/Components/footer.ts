@@ -2,12 +2,13 @@ import styled from 'styled-components'
 
 export const Footer = styled.div`
     //width: 100vw;
-    height: 30vh;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     //background-color: #000;
+    position: relative;
 
     .wrapper {
         padding: 0 100px;
@@ -18,9 +19,9 @@ export const Footer = styled.div`
     }
 
     h1 {
-        font-size: 15rem;
-        color: ${props => props.theme.colors.primary};
-        margin-top: 40px;
+        font-size: 10rem;
+
+        //margin-top: 40px;
         //text-shadow: 0px 2px 16px #000;
     }
     p {

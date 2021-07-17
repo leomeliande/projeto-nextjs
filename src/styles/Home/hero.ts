@@ -21,20 +21,35 @@ export const Hero = styled.div`
         margin-top: 100px;
 
         button {
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
             padding: 20px;
             box-shadow: none;
-            border: none;
-            border-radius: 10px;
             cursor: pointer;
             transition: all 0.2s ease;
-            background: transparent;
+            //background: ${props => props.theme.colors.background};
             color: white;
-            border: 1px solid white;
-            margin: 0 20px;
+            border-width: 1px;
+            border-color: white;
+            border-radius: 100px;
 
-            &:hover {
+            &:nth-of-type(1) {
+                background: transparent;
+
+                &:hover {
+                    background: white;
+                    color: ${props => props.theme.colors.background};
+                }
+            }
+
+            &:nth-of-type(2) {
                 background: white;
                 color: black;
+            }
+
+            svg {
+                margin: 0 5px;
             }
         }
     }
@@ -42,7 +57,9 @@ export const Hero = styled.div`
     h1 {
         font-size: 15rem;
         margin-top: 40px;
+        font-family: 'Times New Roman', Times, serif;
     }
+
     p {
         margin-top: 24px;
         font-size: 3rem;

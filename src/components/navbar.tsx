@@ -1,13 +1,17 @@
 import Link from 'next/link'
 import React from 'react'
 import { Navbar } from '../styles/Components/navbar'
+import { SiAudiomack } from 'react-icons/si'
 
 const NavbarComponent: React.FC = () => {
     return (
         <>
             <Navbar>
                 <div className="wrapper">
-                    <div className="logo">BEATful</div>
+                    <div className="logo">
+                        BEATful
+                        <SiAudiomack />
+                    </div>
                     <div className="navbar-links">
                         <ul>
                             <Link href="/">

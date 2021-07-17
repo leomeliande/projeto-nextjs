@@ -19,6 +19,10 @@ export const Navbar = styled.div`
         align-items: center;
         width: 100%;
 
+        svg {
+            margin: 0 5px;
+        }
+
         .navbar-links {
             display: flex;
             justify-content: space-between;
@@ -35,16 +39,17 @@ export const Navbar = styled.div`
                     cursor: pointer;
                     text-decoration: none;
                     transition: all 0.2s ease;
-                    margin: 0 15px;
-                    padding: 20px;
+                    margin: 0 5px;
+                    padding: 10px;
 
                     &:hover {
-                        color: #f898c8;
+                        //color: #f898c8;
+                        color: ${props => props.theme.palette.pastelmagenta};
                     }
                 }
 
                 .button {
-                    //padding: 20px;
+                    padding: 20px;
                     box-shadow: none;
                     /* border: none;
                     border-radius: 10px; */

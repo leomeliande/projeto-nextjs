@@ -1,20 +1,14 @@
 import styled from 'styled-components'
 
 export const Cards = styled.div`
-    //width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-image: url('/hero.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
     text-align: center;
     background: #e1e1e6;
-    //box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
-    //position: relative;
+    padding: 0 100px;
 
     .btns-hero {
         display: flex;
@@ -41,7 +35,98 @@ export const Cards = styled.div`
         }
     }
 
-    h1 {
+    .content {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 100px auto;
+
+        .image {
+            display: inherit;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                transform: scale(1.1);
+                border: 1px solid ${props => props.theme.palette.eastside};
+            }
+        }
+
+        .image:nth-of-type(n + 2) {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                transform: scale(1.1);
+                border: 1px solid ${props => props.theme.palette.downriver};
+            }
+        }
+
+        &:nth-of-type(n + 2) {
+            flex-wrap: wrap-reverse;
+        }
+
+        & > div {
+            flex: 1 0 auto;
+            width: 50%;
+            min-width: 350px;
+            position: relative;
+
+            /* .image {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: red;
+                }
+            } */
+        }
+
+        &-description {
+            display: inherit;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            text-align: start;
+
+            &:nth-of-type(n + 2) {
+                align-items: flex-end;
+                text-align: end;
+            }
+
+            h1 {
+                font-size: 3rem;
+                //margin-top: 40px;
+                color: ${props => props.theme.palette.downriver};
+            }
+
+            p {
+                margin-top: 24px;
+                font-size: 1rem;
+                line-height: 32px;
+                color: ${props => props.theme.colors.alttext};
+                width: 80%;
+            }
+        }
+    }
+
+    /* h1 {
         font-size: 15rem;
         margin-top: 40px;
     }
@@ -49,5 +134,5 @@ export const Cards = styled.div`
         margin-top: 24px;
         font-size: 3rem;
         line-height: 32px;
-    }
+    } */
 `

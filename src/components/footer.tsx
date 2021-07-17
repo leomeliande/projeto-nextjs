@@ -7,7 +7,9 @@ const FooterComponent: React.FC = () => {
         <>
             <Footer>
                 <div className="wrapper">
-                    <div className="logo">BEATful</div>
+                    <div className="logo">
+                        <h1>BEATful</h1>
+                    </div>
                 </div>
             </Footer>
         </>
