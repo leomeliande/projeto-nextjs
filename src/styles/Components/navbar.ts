@@ -1,70 +1,79 @@
 import styled from 'styled-components'
+import { Custom } from '../../components/navbar'
 
-export const Navbar = styled.div`
-    //width: 100vw;
+export const Navbar = styled.div<Custom>`
     position: fixed;
+    padding: 0 200px;
     width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: transparent;
+    background: ${({ scrolled }) => (scrolled ? '#0a0a0a' : 'transparent')};
+    transition: all 0.5s ease;
     z-index: 9999999;
 
-    .wrapper {
-        padding: 0 100px;
+    .logo {
+        display: flex;
+        align-items: center;
+
+        h4 {
+            font-size: 2rem;
+        }
+
+        svg {
+            font-size: 2rem;
+            margin: 0 5px;
+        }
+    }
+
+    .navbar-links {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 100%;
+        flex-wrap: nowrap;
+        //width: 600px;
 
-        svg {
-            margin: 0 5px;
-        }
+        ul {
+            list-style: none;
 
-        .navbar-links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: nowrap;
-            //width: 600px;
+            a {
+                color: white;
+                font-size: 1rem;
+                cursor: pointer;
+                text-decoration: none;
+                transition: all 0.5s ease;
+                margin: 0 5px;
+                padding: 10px;
 
-            ul {
-                list-style: none;
-
-                a {
-                    color: white;
-                    font-size: 1rem;
-                    cursor: pointer;
-                    text-decoration: none;
-                    transition: all 0.2s ease;
-                    margin: 0 5px;
-                    padding: 10px;
-
-                    &:hover {
-                        //color: #f898c8;
-                        color: ${props => props.theme.palette.pastelmagenta};
-                    }
+                &:hover {
+                    color: ${props => props.theme.palette.pastelmagenta};
                 }
+            }
 
-                .button {
-                    padding: 20px;
-                    box-shadow: none;
-                    /* border: none;
-                    border-radius: 10px; */
-                    cursor: pointer;
-                    transition: all 0.2s ease;
-                    background: ${props => props.theme.colors.background};
-                    color: white;
-                    border-width: 1px;
-                    border-color: transparent;
-                    border-radius: 100px;
+            .button {
+                padding: 20px;
+                box-shadow: none;
+                cursor: pointer;
+                //transition: all 0.2s ease;
+                //background: ${props => props.theme.colors.background};
+                //color: white;
+                color: ${({ scrolled }) => (scrolled ? '#0a0a0a' : '#fff')};
+                background: ${({ scrolled }) =>
+                    scrolled ? '#fff' : '#0a0a0a'};
+                /* border-width: 1px;
+                border-color: ${({ scrolled }) =>
+                    scrolled ? '#fff' : '#0a0a0a'}; */
+                border: 1px solid
+                    ${({ scrolled }) => (scrolled ? '#fff' : 'transparent')};
+                border-radius: 100px;
+                transition: all 0.5s ease;
 
-                    &:hover {
-                        background: white;
-                        color: ${props => props.theme.colors.background};
-                    }
+                &:hover {
+                    color: ${({ scrolled }) => (scrolled ? '#fff' : '#0a0a0a')};
+                    background: ${({ scrolled }) =>
+                        scrolled ? '#0a0a0a' : '#fff'};
                 }
             }
         }

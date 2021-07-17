@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Footer = styled.div`
-    //width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -9,13 +9,16 @@ export const Footer = styled.div`
     flex-direction: row;
     //background-color: #000;
     position: relative;
+    padding: 0 200px;
 
-    .wrapper {
-        padding: 0 100px;
+    .logo {
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: 100%;
+
+        svg {
+            font-size: 10rem;
+            margin: 0 5px;
+        }
     }
 
     h1 {

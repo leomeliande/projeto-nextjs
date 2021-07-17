@@ -8,7 +8,7 @@ export const Cards = styled.div`
     flex-direction: column;
     text-align: center;
     background: #e1e1e6;
-    padding: 0 100px;
+    padding: 0 200px;
 
     .btns-hero {
         display: flex;

@@ -1,22 +1,14 @@
 import styled from 'styled-components'
 
 export const Content = styled.div`
-    //width: 100vw;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     background-color: #fff;
-
-    .wrapper {
-        padding: 0 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
+    padding: 0 200px;
 
     h1 {
         font-size: 5rem;

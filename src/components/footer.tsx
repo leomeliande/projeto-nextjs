@@ -1,15 +1,15 @@
 // import Link from 'next/link'
 import React from 'react'
 import { Footer } from '../styles/Components/footer'
+import { SiAudiomack } from 'react-icons/si'
 
 const FooterComponent: React.FC = () => {
     return (
         <>
             <Footer>
-                <div className="wrapper">
-                    <div className="logo">
-                        <h1>BEATful</h1>
-                    </div>
+                <div className="logo">
+                    <h1>audia</h1>
+                    <SiAudiomack />
                 </div>
             </Footer>
         </>
