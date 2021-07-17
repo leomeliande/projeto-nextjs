@@ -10,6 +10,7 @@ export const Navbar = styled.div`
     align-items: center;
     flex-direction: row;
     background-color: transparent;
+    z-index: 9999999;
 
     .wrapper {
         padding: 0 100px;
@@ -18,39 +19,47 @@ export const Navbar = styled.div`
         align-items: center;
         width: 100%;
 
-        ul {
+        .navbar-links {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 400px;
-            list-style: none;
+            flex-wrap: nowrap;
+            //width: 600px;
 
-            a {
-                color: white;
-                font-size: 1rem;
-                cursor: pointer;
-                text-decoration: none;
-                transition: all 0.2s ease;
+            ul {
+                list-style: none;
 
-                &:hover {
-                    color: #f898c8;
+                a {
+                    color: white;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+                    margin: 0 15px;
+                    padding: 20px;
+
+                    &:hover {
+                        color: #f898c8;
+                    }
                 }
-            }
 
-            button {
-                padding: 20px;
-                box-shadow: none;
-                border: none;
-                border-radius: 10px;
-                cursor: pointer;
-                transition: all 0.2s ease;
-                background: ${props => props.theme.colors.background};
-                color: white;
-                border: 1px solid white;
+                .button {
+                    //padding: 20px;
+                    box-shadow: none;
+                    /* border: none;
+                    border-radius: 10px; */
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    background: ${props => props.theme.colors.background};
+                    color: white;
+                    border-width: 1px;
+                    border-color: transparent;
+                    border-radius: 100px;
 
-                &:hover {
-                    background: white;
-                    color: ${props => props.theme.colors.background};
+                    &:hover {
+                        background: white;
+                        color: ${props => props.theme.colors.background};
+                    }
                 }
             }
         }

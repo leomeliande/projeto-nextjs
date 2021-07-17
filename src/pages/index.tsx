@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 // import Image from 'next/image'
 import { Hero } from '../styles/Home/hero'
+import { Cards } from '../styles/Home/cards'
 
 const Home: React.FC = () => {
     return (
@@ -30,6 +31,8 @@ const Home: React.FC = () => {
                     </div>
                 </main>
             </Hero>
+
+            <Cards></Cards>
         </>
     )
 }
