@@ -12,6 +12,7 @@ export const Hero = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
 
     .btns-hero {
         display: flex;
@@ -40,9 +41,7 @@ export const Hero = styled.div`
 
     h1 {
         font-size: 15rem;
-        color: ${props => props.theme.colors.primary};
         margin-top: 40px;
-        text-shadow: 0px 2px 16px black;
     }
     p {
         margin-top: 24px;

@@ -7,7 +7,7 @@ export const Footer = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: #000;
+    //background-color: #000;
 
     .wrapper {
         padding: 0 100px;
@@ -21,7 +21,7 @@ export const Footer = styled.div`
         font-size: 15rem;
         color: ${props => props.theme.colors.primary};
         margin-top: 40px;
-        text-shadow: 0px 2px 16px #000;
+        //text-shadow: 0px 2px 16px #000;
     }
     p {
         margin-top: 24px;

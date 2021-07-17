@@ -2,12 +2,14 @@ import styled from 'styled-components'
 
 export const Navbar = styled.div`
     //width: 100vw;
+    position: fixed;
+    width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: #000;
+    background-color: transparent;
 
     .wrapper {
         padding: 0 100px;
@@ -42,13 +44,13 @@ export const Navbar = styled.div`
                 border-radius: 10px;
                 cursor: pointer;
                 transition: all 0.2s ease;
-                background: #000;
+                background: ${props => props.theme.colors.background};
                 color: white;
                 border: 1px solid white;
 
                 &:hover {
                     background: white;
-                    color: black;
+                    color: ${props => props.theme.colors.background};
                 }
             }
         }
