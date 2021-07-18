@@ -104,7 +104,7 @@ export const Cards = styled.div`
             }
         }
 
-        &:nth-of-type(n + 2) {
+        &:nth-of-type(even) {
             flex-wrap: wrap-reverse;
         }
 
@@ -113,6 +113,10 @@ export const Cards = styled.div`
             width: 50%;
             min-width: 350px;
             position: relative;
+
+            @media screen and (max-width: 600px) {
+                min-width: 250px;
+            }
 
             /* .image {
                 position: relative;
@@ -135,6 +139,11 @@ export const Cards = styled.div`
             align-items: flex-start;
             text-align: start;
 
+            @media screen and (max-width: 1099px) {
+                align-items: center !important;
+                text-align: center !important;
+            }
+
             &:nth-of-type(n + 2) {
                 align-items: flex-end;
                 text-align: end;
@@ -142,8 +151,16 @@ export const Cards = styled.div`
 
             h1 {
                 font-size: 3rem;
-                //margin-top: 40px;
+                margin-top: 40px;
                 color: ${props => props.theme.palette.downriver};
+
+                @media screen and (min-width: 1100px) {
+                    margin-top: 0;
+                }
+
+                /* @media screen and (max-width: 600px) {
+                    margin-top: 40px;
+                } */
             }
 
             p {

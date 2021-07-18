@@ -21,6 +21,12 @@ const Home: React.FC = () => {
 
             <Hero>
                 <div>
+                    <Image
+                        className="hero"
+                        src="/hero.jpg"
+                        alt="Picture of a woman with colored background"
+                        layout="fill"
+                    />
                     <h1>AUDIA</h1>
                     <p>come join us in the music revolution.</p>
                     <div className="btns-hero">
@@ -40,7 +46,7 @@ const Home: React.FC = () => {
                 <div className="content">
                     <div className="image">
                         <Image
-                            src="/austin-neill-hgO1wFPXl3I-unsplash.jpg"
+                            src="/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg"
                             alt="Picture of a live concert"
                             width={1300}
                             height={800}
@@ -78,6 +84,28 @@ const Home: React.FC = () => {
                             height={800}
                             className="image"
                         />
+                    </div>
+                </div>
+
+                <div className="content">
+                    <div className="image">
+                        <Image
+                            src="/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg"
+                            alt="Picture of a DJ equipment"
+                            width={1300}
+                            height={800}
+                            className="image"
+                        />
+                    </div>
+                    <div className="content-description">
+                        <h1>Lorem ipsum dolor sit.</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Consectetur magnam eos minima esse corrupti
+                            repellendus velit. Sunt iste inventore assumenda!
+                            Exercitationem tenetur aut deleniti neque quo
+                            laboriosam explicabo mollitia quas!
+                        </p>
                     </div>
                 </div>
             </Cards>

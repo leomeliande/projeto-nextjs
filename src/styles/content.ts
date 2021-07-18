@@ -5,8 +5,9 @@ export const Content = styled.div`
     height: 100%;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
+    //flex-direction: row;
     background-color: #fff;
     padding: 0 200px;
 
@@ -19,6 +20,7 @@ export const Content = styled.div`
         color: ${props => props.theme.colors.primary};
         margin-top: 40px;
     }
+
     p {
         margin: 100px 0;
         font-size: 3rem;

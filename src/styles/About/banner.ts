@@ -17,5 +17,9 @@ export const Banner = styled.div`
     h1 {
         font-family: 'Times New Roman', Times, serif;
         font-size: 15rem;
+
+        @media screen and (max-width: 800px) {
+            font-size: 10rem;
+        }
     }
 `
