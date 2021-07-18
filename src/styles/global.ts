@@ -15,6 +15,10 @@ export default createGlobalStyle`
         overflow-x: hidden;
     }
 
+    .suppress-scroll {
+        overflow: hidden;
+    }
+
     /* .scrollTop {
         position: fixed; 
         width: 100%;
@@ -63,8 +67,11 @@ export default createGlobalStyle`
         opacity: 0.5;
     }
 
-    .back-to-top:hover {
-        color: ${props => props.theme.colors.background};
-        background: ${props => props.theme.palette.pastelmagenta};
+    @media screen and (min-width: 1100px) {
+        .back-to-top:hover {
+            color: ${props => props.theme.colors.background};
+            background: ${props => props.theme.palette.pastelmagenta};
+        }
     }
+    
 `

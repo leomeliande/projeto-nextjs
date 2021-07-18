@@ -104,24 +104,15 @@ export const Navbar = styled.div<Custom>`
 
     @media screen and (max-width: 1099px) {
         .navbar-links {
-            /* display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: calc(100vh - 75px);
-            position: absolute;
-            top: 10vh;
-            right: -100%;
-            opacity: 0;
-            transition: all 0.3s ease; */
             display: flex;
             flex-direction: column;
-            width: 40%;
+            width: 50%;
             height: 400px;
             position: absolute;
             top: 10vh;
             right: -100%;
             opacity: 0;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
             justify-content: space-evenly;
             border-radius: ${({ scrolled }) =>
                 scrolled ? '0px 0px 0px 20px' : '20px 0px 0px 20px'};
@@ -169,8 +160,8 @@ export const Navbar = styled.div<Custom>`
             background: ${props => props.theme.colors.background};
             right: 0;
             opacity: 1;
-            transition: all 0.3s ease;
-            z-index: 1;
+            transition: all 0.5s ease;
+            z-index: 9999999;
         }
 
         .menu-icon {
@@ -179,6 +170,22 @@ export const Navbar = styled.div<Custom>`
             right: 40px;
             font-size: 1.8rem;
             cursor: pointer;
+        }
+    }
+
+    .background-dark {
+        display: block;
+        z-index: -1;
+        width: 100vw;
+        height: ${({ scrolled }) => (scrolled ? '90vh' : '100vh')};
+        position: fixed;
+        top: ${({ scrolled }) => (scrolled ? '10vh' : '0')};
+        left: 0;
+        background: rgba(0, 0, 0, 0.75);
+        transition: all 0.5s ease;
+
+        &.hidden {
+            display: none;
         }
     }
 

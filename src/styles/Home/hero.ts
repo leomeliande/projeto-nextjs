@@ -18,14 +18,14 @@ export const Hero = styled.div`
         padding: 0 50px;
     }
 
-    & > div > div {
+    /* & > div > div {
         position: relative !important;
-    }
+    } */
 
     .hero {
         object-fit: cover;
-        /* width: 100%;
-        height: 100%; */
+        width: 100%;
+        height: 100%;
         position: fixed !important;
         z-index: -1;
     }
@@ -36,24 +36,22 @@ export const Hero = styled.div`
         align-items: center;
         flex-wrap: wrap;
         margin-top: 100px;
-        //max-width: 500px;
-        //width: 100%;
 
         button {
             display: flex;
             align-items: center;
+            justify-content: center;
             margin: 0 15px;
             padding: 20px;
             box-shadow: none;
             cursor: pointer;
             transition: all 0.2s ease;
-            //background: ${props => props.theme.colors.background};
             color: white;
             border-width: 1px;
             border-color: white;
             border-radius: 100px;
-            /* flex: 1 0 auto;
-            max-width: 210px; */
+            flex: 1 0 auto;
+            max-width: 210px;
 
             &:nth-of-type(1) {
                 background: transparent;

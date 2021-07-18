@@ -17,26 +17,22 @@ const NavbarComponent: React.FC = () => {
     const [scrolled, setScrolled] = useState(false)
     const [click, setClick] = useState(false)
     const [menu, setMenu] = useState(states.open)
-    // const [button, setButton] = useState(true)
+    const [darkbg, showDarkbg] = React.useState(false)
 
     const closeMobileMenu = () => setClick(false)
 
     const handleClick = () => {
         if (menu === states.open) {
             setMenu(states.close)
+            showDarkbg(true)
+            document.body.classList.add('suppress-scroll')
         } else {
             setMenu(states.open)
+            showDarkbg(false)
+            document.body.classList.remove('suppress-scroll')
         }
         setClick(!click)
     }
-
-    /* const showButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false)
-        } else {
-            setButton(true)
-        }
-    } */
 
     const handleScroll = () => {
         const offset = window.scrollY
@@ -57,31 +53,19 @@ const NavbarComponent: React.FC = () => {
             <Navbar scrolled={scrolled}>
                 <div className="logo">
                     <Link href="/">
-                        <h4>audia</h4>
+                        <h4>aura</h4>
                     </Link>
                     <SiAudiomack />
                 </div>
-                <div className="menu-icon" onClick={() => handleClick()}>
+                <div
+                    className="menu-icon"
+                    onClick={() => {
+                        handleClick()
+                    }}
+                >
                     {menu}
                 </div>
-                {/* <div className="navbar-links"> */}
-                {/* <ul>
-                        <Link href="/">
-                            <a>Home</a>
-                        </Link>
-                        <Link href="/services">
-                            <a>Services</a>
-                        </Link>
-                        <Link href="/about">
-                            <a>About</a>
-                        </Link>
-                        <Link href="/about">
-                            <a className="button">Sign Up</a>
-                        </Link>
-                        <Link href="/about">
-                            <a className="button">Download</a>
-                        </Link>
-                    </ul> */}
+
                 <ul className={click ? 'navbar-links active' : 'navbar-links'}>
                     <Link href="/">
                         <a onClick={closeMobileMenu}>Home</a>
@@ -92,6 +76,7 @@ const NavbarComponent: React.FC = () => {
                     <Link href="/about">
                         <a onClick={closeMobileMenu}>About</a>
                     </Link>
+                    {/* <li className="separator" role="separator"></li> */}
                     <Link href="/about">
                         <a className="button" onClick={closeMobileMenu}>
                             Sign Up
@@ -102,14 +87,12 @@ const NavbarComponent: React.FC = () => {
                             Download
                         </a>
                     </Link>
-                    {/* <li className="nav-item search">
-                            <FaSearch />
-                        </li> */}
-                    {/* <button className="search-desktop" id="open_search">
-                            <FaSearch />
-                        </button> */}
                 </ul>
-                {/* </div> */}
+                <div
+                    className={
+                        darkbg ? 'background-dark' : 'background-dark hidden'
+                    }
+                />
             </Navbar>
         </>
     )

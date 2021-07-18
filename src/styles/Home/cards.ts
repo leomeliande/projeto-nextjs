@@ -49,6 +49,18 @@ export const Cards = styled.div`
             display: inherit;
             position: relative;
             z-index: 1;
+            box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
+            filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+            //border-radius: 10px;
+
+            img {
+                transition: all 0.5s ease;
+                object-fit: cover;
+            }
+
+            img:hover {
+                transform: scale(1.1);
+            }
 
             &::before {
                 content: '';
@@ -61,6 +73,8 @@ export const Cards = styled.div`
                 height: 100%;
                 z-index: 0;
                 border: 1px solid ${props => props.theme.palette.eastside};
+                box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
+                filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
             }
 
             &::after {
@@ -74,6 +88,8 @@ export const Cards = styled.div`
                 height: 100%;
                 z-index: -1;
                 border: 1px solid ${props => props.theme.palette.affair};
+                box-shadow: 0 -6px 20px rgb(56 125 255 / 17%);
+                filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
             }
         }
 
@@ -88,6 +104,8 @@ export const Cards = styled.div`
                 width: 100%;
                 height: 100%;
                 border: 1px solid ${props => props.theme.palette.downriver};
+                box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
+                filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
             }
 
             &::after {
@@ -101,6 +119,8 @@ export const Cards = styled.div`
                 height: 100%;
                 z-index: -1;
                 border: 1px solid ${props => props.theme.palette.pastelmagenta};
+                box-shadow: 0 -6px 20px rgb(56 125 255 / 17%);
+                filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
             }
         }
 
@@ -150,7 +170,7 @@ export const Cards = styled.div`
             }
 
             h1 {
-                font-size: 3rem;
+                font-size: 5rem;
                 margin-top: 40px;
                 color: ${props => props.theme.palette.downriver};
 
@@ -164,9 +184,9 @@ export const Cards = styled.div`
             }
 
             p {
-                margin-top: 24px;
-                font-size: 1rem;
-                line-height: 32px;
+                //margin-top: 24px;
+                font-size: 1.4rem;
+                line-height: 22px;
                 color: ${props => props.theme.colors.alttext};
                 width: 80%;
             }

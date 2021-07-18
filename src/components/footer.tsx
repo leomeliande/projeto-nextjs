@@ -8,7 +8,7 @@ const FooterComponent: React.FC = () => {
         <>
             <Footer>
                 <div className="logo">
-                    <h1>audia</h1>
+                    <h1>aura</h1>
                     <SiAudiomack />
                 </div>
             </Footer>
