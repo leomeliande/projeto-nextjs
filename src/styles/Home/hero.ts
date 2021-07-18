@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Hero = styled.div`
-    //width: 100vw;
     height: 90vh;
     padding: 0 200px;
     display: flex;
@@ -14,6 +13,10 @@ export const Hero = styled.div`
     background-repeat: no-repeat;
     text-align: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+
+    @media screen and (max-width: 800px) {
+        padding: 0 50px;
+    }
 
     .btns-hero {
         display: flex;

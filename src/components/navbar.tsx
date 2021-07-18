@@ -28,7 +28,9 @@ const NavbarComponent: React.FC = () => {
         <>
             <Navbar scrolled={scrolled}>
                 <div className="logo">
-                    <h4>audia</h4>
+                    <Link href="/">
+                        <h4>audia</h4>
+                    </Link>
                     <SiAudiomack />
                 </div>
                 <div className="navbar-links">

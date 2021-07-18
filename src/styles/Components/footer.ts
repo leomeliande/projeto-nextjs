@@ -3,13 +3,18 @@ import styled from 'styled-components'
 export const Footer = styled.div`
     width: 100%;
     height: auto;
+    min-height: 500px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     //background-color: #000;
     position: relative;
     padding: 0 200px;
+
+    @media screen and (max-width: 800px) {
+        padding: 0 50px;
+    }
 
     .logo {
         display: flex;

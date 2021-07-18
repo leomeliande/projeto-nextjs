@@ -10,6 +10,10 @@ export const Cards = styled.div`
     background: #e1e1e6;
     padding: 0 200px;
 
+    @media screen and (max-width: 800px) {
+        padding: 0 50px;
+    }
+
     .btns-hero {
         display: flex;
         justify-content: center;
@@ -44,18 +48,32 @@ export const Cards = styled.div`
         .image {
             display: inherit;
             position: relative;
+            z-index: 1;
 
             &::before {
                 content: '';
                 position: absolute;
-                top: 0;
+                top: 20px;
                 bottom: 0;
-                left: 0;
+                left: -20px;
                 right: 0;
                 width: 100%;
                 height: 100%;
-                transform: scale(1.1);
+                z-index: 0;
                 border: 1px solid ${props => props.theme.palette.eastside};
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -20px;
+                bottom: 0;
+                left: 20px;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                border: 1px solid ${props => props.theme.palette.affair};
             }
         }
 
@@ -63,14 +81,26 @@ export const Cards = styled.div`
             &::before {
                 content: '';
                 position: absolute;
-                top: 0;
+                top: 20px;
                 bottom: 0;
-                left: 0;
+                left: 20px;
                 right: 0;
                 width: 100%;
                 height: 100%;
-                transform: scale(1.1);
                 border: 1px solid ${props => props.theme.palette.downriver};
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -20px;
+                bottom: 0;
+                left: -20px;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                border: 1px solid ${props => props.theme.palette.pastelmagenta};
             }
         }
 

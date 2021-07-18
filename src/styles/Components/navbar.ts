@@ -14,12 +14,17 @@ export const Navbar = styled.div<Custom>`
     transition: all 0.5s ease;
     z-index: 9999999;
 
+    @media screen and (max-width: 800px) {
+        padding: 0 50px;
+    }
+
     .logo {
         display: flex;
         align-items: center;
 
         h4 {
             font-size: 2rem;
+            cursor: pointer;
         }
 
         svg {

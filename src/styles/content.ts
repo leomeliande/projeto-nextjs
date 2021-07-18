@@ -10,6 +10,10 @@ export const Content = styled.div`
     background-color: #fff;
     padding: 0 200px;
 
+    @media screen and (max-width: 800px) {
+        padding: 0 50px;
+    }
+
     h1 {
         font-size: 5rem;
         color: ${props => props.theme.colors.primary};
