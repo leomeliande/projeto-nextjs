@@ -46,7 +46,7 @@ export const Navbar = styled.div<Custom>`
         }
 
         .button {
-            padding: 20px;
+            padding: 15px;
             box-shadow: none;
             cursor: pointer;
             //transition: all 0.2s ease;
@@ -132,7 +132,7 @@ export const Navbar = styled.div<Custom>`
             }
 
             .button {
-                padding: 20px;
+                padding: 15px;
                 box-shadow: none;
                 cursor: pointer;
                 //transition: all 0.2s ease;

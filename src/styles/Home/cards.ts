@@ -7,7 +7,7 @@ export const Cards = styled.div`
     align-items: center;
     flex-direction: column;
     text-align: center;
-    background: #e1e1e6;
+    background: ${props => props.theme.colors.text};
     padding: 0 200px;
 
     @media screen and (max-width: 800px) {
@@ -74,7 +74,9 @@ export const Cards = styled.div`
                 z-index: 0;
                 border: 1px solid ${props => props.theme.palette.eastside};
                 box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
-                filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+                filter: drop-shadow(
+                    0 6px 20px ${props => props.theme.palette.eastside}
+                );
             }
 
             &::after {
@@ -89,7 +91,9 @@ export const Cards = styled.div`
                 z-index: -1;
                 border: 1px solid ${props => props.theme.palette.affair};
                 box-shadow: 0 -6px 20px rgb(56 125 255 / 17%);
-                filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+                filter: drop-shadow(
+                    0 6px 20px ${props => props.theme.palette.affair}
+                );
             }
         }
 
@@ -105,7 +109,9 @@ export const Cards = styled.div`
                 height: 100%;
                 border: 1px solid ${props => props.theme.palette.downriver};
                 box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
-                filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+                filter: drop-shadow(
+                    0 6px 20px ${props => props.theme.palette.downriver}
+                );
             }
 
             &::after {
@@ -120,7 +126,9 @@ export const Cards = styled.div`
                 z-index: -1;
                 border: 1px solid ${props => props.theme.palette.pastelmagenta};
                 box-shadow: 0 -6px 20px rgb(56 125 255 / 17%);
-                filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+                filter: drop-shadow(
+                    0 6px 20px ${props => props.theme.palette.pastelmagenta}
+                );
             }
         }
 

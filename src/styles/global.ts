@@ -9,6 +9,10 @@ export default createGlobalStyle`
         font-size: 1rem;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         background: ${props => props.theme.colors.background};
         color: ${props => props.theme.colors.text};

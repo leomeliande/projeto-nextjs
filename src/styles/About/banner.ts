@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Banner = styled.div`
-    //width: 100vw;
     height: 70vh;
     display: flex;
     justify-content: center;
@@ -11,6 +10,7 @@ export const Banner = styled.div`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     text-align: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
 

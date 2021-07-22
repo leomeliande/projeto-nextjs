@@ -7,10 +7,14 @@ export const Hero = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-image: url('/hero.jpg');
+    background-image: url('/hero.jpg');
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    //background-position: center;
+    //background-repeat: no-repeat;
+    //background-size: cover;
     text-align: center;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
 

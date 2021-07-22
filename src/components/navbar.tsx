@@ -19,7 +19,12 @@ const NavbarComponent: React.FC = () => {
     const [menu, setMenu] = useState(states.open)
     const [darkbg, showDarkbg] = React.useState(false)
 
-    const closeMobileMenu = () => setClick(false)
+    const closeMobileMenu = () => {
+        setClick(false)
+        setMenu(states.open)
+        showDarkbg(false)
+        document.body.classList.remove('suppress-scroll')
+    }
 
     const handleClick = () => {
         if (menu === states.open) {

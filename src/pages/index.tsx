@@ -21,11 +21,11 @@ const Home: React.FC = () => {
 
             <Hero>
                 <>
-                    <img
+                    {/* <img
                         className="hero"
                         src="/hero.jpg"
                         alt="Picture of a woman with colored background"
-                    />
+                    /> */}
                     <h1>AURA</h1>
                     <p>join us in the music revolution.</p>
                     <div className="btns-hero">
@@ -53,13 +53,11 @@ const Home: React.FC = () => {
                     </div>
 
                     <div className="content-description">
-                        <h1>Lorem ipsum dolor sit.</h1>
+                        <h1>Live shows and videos</h1>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit. Consectetur magnam eos minima esse corrupti
-                            repellendus velit. Sunt iste inventore assumenda!
-                            Exercitationem tenetur aut deleniti neque quo
-                            laboriosam explicabo mollitia quas!
+                            Watch over 50,000 high-quality videos, including
+                            music videos, original content, live streams and
+                            exclusive events.
                         </p>
                     </div>
                 </div>
