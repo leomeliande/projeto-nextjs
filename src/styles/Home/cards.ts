@@ -39,11 +39,47 @@ export const Cards = styled.div`
         }
     }
 
+    .content:nth-of-type(odd) {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            bottom: 0;
+            left: 50px;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: 1px solid ${props => props.theme.palette.downriver};
+            box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
+            filter: drop-shadow(
+                0 6px 20px ${props => props.theme.palette.downriver}
+            );
+        }
+    }
+
     .content {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         margin: 100px auto;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            bottom: 0;
+            left: -50px;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            border: 1px solid ${props => props.theme.palette.eastside};
+            box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
+            filter: drop-shadow(
+                0 6px 20px ${props => props.theme.palette.eastside}
+            );
+        }
 
         .image {
             display: inherit;
@@ -51,7 +87,6 @@ export const Cards = styled.div`
             z-index: 1;
             box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
             filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-            //border-radius: 10px;
 
             img {
                 transition: all 0.5s ease;
@@ -60,75 +95,6 @@ export const Cards = styled.div`
 
             img:hover {
                 transform: scale(1.1);
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                top: 20px;
-                bottom: 0;
-                left: -20px;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 0;
-                border: 1px solid ${props => props.theme.palette.eastside};
-                box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
-                filter: drop-shadow(
-                    0 6px 20px ${props => props.theme.palette.eastside}
-                );
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: -20px;
-                bottom: 0;
-                left: 20px;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                border: 1px solid ${props => props.theme.palette.affair};
-                box-shadow: 0 -6px 20px rgb(56 125 255 / 17%);
-                filter: drop-shadow(
-                    0 6px 20px ${props => props.theme.palette.affair}
-                );
-            }
-        }
-
-        .image:nth-of-type(n + 2) {
-            &::before {
-                content: '';
-                position: absolute;
-                top: 20px;
-                bottom: 0;
-                left: 20px;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                border: 1px solid ${props => props.theme.palette.downriver};
-                box-shadow: 0 6px 20px rgb(56 125 255 / 17%);
-                filter: drop-shadow(
-                    0 6px 20px ${props => props.theme.palette.downriver}
-                );
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: -20px;
-                bottom: 0;
-                left: -20px;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                border: 1px solid ${props => props.theme.palette.pastelmagenta};
-                box-shadow: 0 -6px 20px rgb(56 125 255 / 17%);
-                filter: drop-shadow(
-                    0 6px 20px ${props => props.theme.palette.pastelmagenta}
-                );
             }
         }
 
@@ -145,19 +111,6 @@ export const Cards = styled.div`
             @media screen and (max-width: 600px) {
                 min-width: 250px;
             }
-
-            /* .image {
-                position: relative;
-
-                &::before {
-                    content: '';
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    background-color: red;
-                }
-            } */
         }
 
         &-description {
@@ -178,21 +131,17 @@ export const Cards = styled.div`
             }
 
             h1 {
-                font-size: 5rem;
+                font-size: 4rem;
                 margin-top: 40px;
                 color: ${props => props.theme.palette.downriver};
+                width: 80%;
 
                 @media screen and (min-width: 1100px) {
                     margin-top: 0;
                 }
-
-                /* @media screen and (max-width: 600px) {
-                    margin-top: 40px;
-                } */
             }
 
             p {
-                //margin-top: 24px;
                 font-size: 1.4rem;
                 line-height: 22px;
                 color: ${props => props.theme.colors.alttext};
@@ -200,14 +149,4 @@ export const Cards = styled.div`
             }
         }
     }
-
-    /* h1 {
-        font-size: 15rem;
-        margin-top: 40px;
-    }
-    p {
-        margin-top: 24px;
-        font-size: 3rem;
-        line-height: 32px;
-    } */
 `

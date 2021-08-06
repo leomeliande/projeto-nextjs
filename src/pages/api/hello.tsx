@@ -6,9 +6,15 @@ export default function handler(
         status: (arg0: number) => {
             (): unknown
             new (): unknown
-            json: { (arg0: { name: string }): void; new (): unknown }
+            json: {
+                (arg0: { name: string; age: number }): void
+                new (): unknown
+            }
         }
     }
 ): void {
-    res.status(200).json({ name: 'Leonrado Meliande' })
+    res.status(200).json({
+        name: 'Leonardo Meliande',
+        age: 26
+    })
 }
